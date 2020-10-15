@@ -1,8 +1,8 @@
 NAME=wayland
-VERSION=1.16.0
-REVISION=1
+VERSION=1.18.0
+REVISION=2
 LICENSE=MIT
-SRC=https://wayland.freedesktop.org/releases/wayland-1.16.0.tar.xz
-SRCMD5=0c215e53de71d6fb26f7102cdc6432d3
-BUILDDEPS=libxml2
+SRC=https://wayland.freedesktop.org/releases/wayland-1.18.0.tar.xz
+SRCMD5=23317697b6e3ff2e1ac8c5ba3ed57b65
+BUILDDEPS=meson ninja libxml2
 INSTALLDEPS=libxml2

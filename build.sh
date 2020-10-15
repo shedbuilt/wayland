@@ -1,6 +1,7 @@
 #!/bin/bash
-./configure --prefix=/usr \
-            --disable-static \
-	    --disable-documentation &&
-make -j $SHED_NUM_JOBS &&
-make DESTDIR="$SHED_FAKE_ROOT" install
+mkdir build &&
+cd build &&
+meson --prefix=/usr \
+      -Ddocumentation=false &&
+NINJAJOBS=$SHED_NUM_JOBS ninja &&
+DESTDIR="$SHED_FAKE_ROOT" ninja install
